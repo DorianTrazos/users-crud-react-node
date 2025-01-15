@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 	const [users, setUsers] = useState([]);
+	console.log(users);
 
 	useEffect(() => {
 		fetchUsers(setUsers);
