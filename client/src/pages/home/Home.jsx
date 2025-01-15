@@ -33,7 +33,7 @@ export default Home;
 const fetchUsers = async setUsers => {
 	try {
 		const response = await fetch(
-			'https://users-crud-react-node.onrender.com:3000/api/users',
+			'https://users-crud-react-node.onrender.com/api/users',
 			{
 				method: 'GET',
 				headers: {
@@ -52,7 +52,7 @@ const fetchUsers = async setUsers => {
 const deleteUserById = async (id, setUsers) => {
 	try {
 		const response = await fetch(
-			`https://users-crud-react-node.onrender.com:3000/api/users/${id}`,
+			`https://users-crud-react-node.onrender.com/api/users/${id}`,
 			{
 				method: 'DELETE'
 			}

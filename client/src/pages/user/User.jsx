@@ -59,7 +59,7 @@ const User = () => {
 const getUserById = async (id, setUser) => {
 	try {
 		const response = await fetch(
-			`https://users-crud-react-node.onrender.com:3000/api/users/${id}`
+			`https://users-crud-react-node.onrender.com/api/users/${id}`
 		);
 		const user = await response.json();
 		setUser(user);
@@ -71,7 +71,7 @@ const getUserById = async (id, setUser) => {
 const updateUserById = async (id, user, setIsEditingUser) => {
 	try {
 		const response = await fetch(
-			`https://users-crud-react-node.onrender.com:3000/api/users/${id}`,
+			`https://users-crud-react-node.onrender.com/api/users/${id}`,
 			{
 				method: 'PATCH',
 				body: JSON.stringify(user),
