@@ -6,7 +6,7 @@ const userRoutes = require('./routes/users.routes');
 
 const corsOptions = {
   origin: '*', // Orígenes permitidos
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'], // Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'], // Headers permitidos
   credentials: true // Habilitar cookies/credenciales
 };
