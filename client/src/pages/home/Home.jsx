@@ -32,7 +32,16 @@ export default Home;
 
 const fetchUsers = async setUsers => {
 	try {
-		const response = await fetch('http://localhost:3000/api/users');
+		const response = await fetch(
+			'https://users-crud-react-node.onrender.com:3000/api/users',
+			{
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json'
+				}
+			}
+		);
 		const users = await response.json();
 		setUsers(users);
 	} catch (error) {
@@ -42,9 +51,12 @@ const fetchUsers = async setUsers => {
 
 const deleteUserById = async (id, setUsers) => {
 	try {
-		const response = await fetch(`http://localhost:3000/api/users/${id}`, {
-			method: 'DELETE'
-		});
+		const response = await fetch(
+			`https://users-crud-react-node.onrender.com:3000/api/users/${id}`,
+			{
+				method: 'DELETE'
+			}
+		);
 		const usersUpdated = await response.json();
 		setUsers(usersUpdated);
 	} catch (error) {
